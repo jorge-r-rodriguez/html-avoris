@@ -1,0 +1,684 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="img/icon_world.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avoris</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Syne:wght@400..800&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="nav">
+      <span class="nav-logo">
+        <img src="img/logo.svg" alt="Logo" />
+      </span>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <img src="img/burger-menu.svg" />
+      </button>
+      <ul class="nav-links" data-visible="false">
+        <li class="nav-item nav-item-active">
+          <a href="#" class="nav-link" aria-label="Aventura" role="button">
+            <img src="img/icon_adventure.svg" alt="Aventura" />
+            <span>Aventura</span>
+          </a>
+        </li>
+        <li class="nav-item" aria-label="Destinos">
+          <a href="#" class="nav-link">
+            <img src="img/icon_world.svg" alt="Destinos" />
+            <span>Destinos</span>
+          </a>
+        </li>
+        <li class="nav-item" aria-label="Alojamientos">
+          <a href="#" class="nav-link">
+            <img src="img/icon_house.svg" alt="Alojamientos" />
+            <span>Alojamientos</span>
+          </a>
+        </li>
+        <li class="nav-item" aria-label="Sobre Nosotros">
+          <a href="#" class="nav-link">
+            <span>Sobre Nosotros</span>
+          </a>
+        </li>
+      </ul>
+      <button class="nav-button">Reserva</button>
+    </nav>
+    <!-- Carousel -->
+    <header>
+      <section class="carousel">
+        <div class="carousel">
+          <div class="carousel-slides" style="transform: translateX(-100%)">
+            <div
+              class="carousel-slide"
+              style="background-image: url('img/fondo.png')"
+            >
+              <div class="carousel-content">
+                <h2>Ruta por Australia</h2>
+                <p>Si te va la aventura, no te lo puedes perder</p>
+                <button class="btn-cta">Más información</button>
+              </div>
+            </div>
+            <div
+              class="carousel-slide"
+              style="background-image: url('img/fondo.png')"
+            >
+              <div class="carousel-content">
+                <h2>Ruta por Australia</h2>
+                <p>Si te va la aventura, no te lo puedes perder</p>
+                <button class="btn-cta">Más información</button>
+              </div>
+            </div>
+            <div
+              class="carousel-slide"
+              style="background-image: url('img/fondo.png')"
+            >
+              <div class="carousel-content">
+                <h2>Ruta por Australia</h2>
+                <p>Si te va la aventura, no te lo puedes perder</p>
+                <button class="btn-cta">Más información</button>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-nav carousel-prev"
+            aria-label="Anterior"
+          >
+            <img src="img/chevron-left.svg" />
+          </button>
+          <button
+            class="carousel-nav carousel-next"
+            aria-label="Siguiente"
+          >
+            <img src="img/chevron-right.svg" />
+          </button>
+          <div class="carousel-dots">
+            <button class="carousel-dot" data-slide-to="0"></button
+            ><button
+              class="carousel-dot carousel-dot-active"
+              data-slide-to="1"
+            ></button
+            ><button class="carousel-dot" data-slide-to="2"></button>
+          </div>
+        </div>
+      </section>
+    </header>
+   
+
+    <section class="intro">
+      <h1>Vive tus propias aventuras</h1>
+      <p>Para los que les gusta explorar y conocer mundo sin complejos</p>
+    </section>
+
+    <section class="layout">
+      <div class="filters-toogle">
+        <button
+          class="filters-toggle-button"
+          aria-label="Abrir filtros"
+          aria-expanded="true"
+        >
+          <span><img src="img/filters.svg" /></span>
+          <span>Ver Filtros</span>
+        </button>
+      </div>
+
+      <!-- Filtros -->
+      <section class="layout__grid">
+        <aside
+          class="filters-wrapper"
+          data-visible="false"
+          aria-label="Filtrar por actividad"
+        >
+          <header>
+            <h2>Filtrar mi búsqueda</h2>
+            <span class="filters-close-button"
+              ><button id="close-bilters-button" aria-expanded="false">
+                <img src="img/close.svg" /></button
+            ></span>
+          </header>
+          <div class="separator"></div>
+          <form id="form-filters" class="form-filters">
+            <details class="filter-section">
+              <summary class="filter-summary">
+                <span class="filter-icon filter-icon-world"></span>
+                Destinos
+              </summary>
+              <fieldset class="filter-fieldset">
+                <legend class="filter-for">Filtrar por destino</legend>
+
+                <label class="filter-checkbox">
+                  <input
+                    type="checkbox"
+                    name="destination"
+                    value="asia"
+                    class="filter-checkbox-input"
+                  />
+                  <span class="filter-checkbox-custom"></span>
+                  <span class="filter-checkbox-label">Asia</span>
+                  <span class="tooltip">
+                    <span class="tooltip-text">Loremp ipsum </span>
+                    <span class="tooltip__icon"
+                      ><img src="img/icon-info.svg"
+                    /></span>
+                  </span> </label
+                ><br />
+
+                <label class="filter-checkbox">
+                  <input
+                    type="checkbox"
+                    name="destination"
+                    value="europe"
+                    class="filter-checkbox-input"
+                  />
+                  <span class="filter-checkbox-custom"></span>
+                  <span class="filter-checkbox-label">Europa</span>
+                  <span class="tooltip">
+                    <span class="tooltip-text">Loremp ipsum </span>
+                    <span class="tooltip__icon"
+                      ><img src="img/icon-info.svg"
+                    /></span>
+                  </span> </label
+                ><br />
+
+                <label class="filter-checkbox">
+                  <input
+                    type="checkbox"
+                    name="destination"
+                    value="latinoamerica"
+                    class="filter-checkbox-input"
+                  />
+                  <span class="filter-checkbox-custom"></span>
+                  <span class="filter-checkbox-label">Latinoamérica</span
+                  >
+                  <span class="tooltip">
+                    <span class="tooltip-text">Loremp ipsum</span>
+                    <span class="tooltip__icon"
+                      ><img src="img/icon-info.svg"
+                    /></span>
+                  </span> </label
+                ><br />
+              </fieldset>
+            </details>
+
+            <details class="filter-section" open="">
+              <summary class="filter-summary">
+                <span class="filter-icon filter-icon-adventure"></span>
+                Aventura
+              </summary>
+              <fieldset class="filter-fieldset">
+                <legend class="filter-for">Filtrar por actividad</legend>
+
+                <label class="filter-checkbox">
+                  <input
+                    type="checkbox"
+                    name="activity"
+                    value="quads"
+                    class="filter-checkbox-input"
+                  />
+                  <span class="filter-checkbox-custom"></span>
+                  <span class="filter-checkbox-label">Quads</span>
+                  <span class="tooltip">
+                    <span class="tooltip-text">Loremp ipsum</span>
+                    <span class="tooltip__icon"
+                      ><img src="img/icon-info.svg"
+                    /></span>
+                  </span> </label
+                ><br />
+
+                <label class="filter-checkbox">
+                  <input
+                    type="checkbox"
+                    name="activity"
+                    value="parapente"
+                    class="filter-checkbox-input"
+                  />
+                  <span class="filter-checkbox-custom"></span>
+                  <span class="filter-checkbox-label">Parapente</span>
+                  <span class="tooltip">
+                    <span class="tooltip-text">Loremp ipsum</span>
+                    <span class="tooltip__icon"
+                      ><img src="img/icon-info.svg"
+                    /></span>
+                  </span> </label
+                ><br />
+
+                <label class="filter-checkbox">
+                  <input
+                    type="checkbox"
+                    name="activity"
+                    value="surf"
+                    class="filter-checkbox-input"
+                  />
+                  <span class="filter-checkbox-custom"></span>
+                  <span class="filter-checkbox-label">Surf</span>
+                  <span class="tooltip">
+                    <span class="tooltip-text">Loremp ipsum</span>
+                    <span class="tooltip__icon"
+                      ><img src="img/icon-info.svg"
+                    /></span>
+                  </span> </label
+                ><br />
+              </fieldset>
+            </details>
+
+            <details class="filter-section">
+              <summary class="filter-summary">
+                <span class="filter-icon filter-icon-house"></span>
+                Alojamiento
+              </summary>
+              <fieldset class="filter-fieldset">
+                <legend class="filter-for">Filtrar por alojamiento</legend>
+
+                <label class="filter-checkbox">
+                  <input
+                    type="checkbox"
+                    name="accommodation"
+                    value="hotel"
+                    class="filter-checkbox-input"
+                  />
+                  <span class="filter-checkbox-custom"></span>
+                  <span class="filter-checkbox-label">Hotel</span>
+                  <span class="tooltip">
+                    <span class="tooltip-text">Loremp ipsum</span>
+                    <span class="tooltip__icon"
+                      ><img src="img/icon-info.svg"
+                    /></span>
+                  </span> </label
+                ><br />
+
+                <label class="filter-checkbox">
+                  <input
+                    type="checkbox"
+                    name="accommodation"
+                    value="department"
+                    class="filter-checkbox-input"
+                  />
+                  <span class="filter-checkbox-custom"></span>
+                  <span class="filter-checkbox-label">Departamento</span>
+                  <span class="tooltip">
+                    <span class="tooltip-text">Loremp ipsum</span>
+                    <span class="tooltip__icon"
+                      ><img src="img/icon-info.svg"
+                    /></span>
+                  </span> </label
+                ><br />
+
+                <label class="filter-checkbox">
+                  <input
+                    type="checkbox"
+                    name="accommodation"
+                    value="house"
+                    class="filter-checkbox-input"
+                  />
+                  <span class="filter-checkbox-custom"></span>
+                  <span class="filter-checkbox-label">Casa</span>
+                  <span class="tooltip">
+                    <span class="tooltip-text">Loremp ipsum</span>
+                    <span class="tooltip__icon"
+                      ><img src="img/icon-info.svg"
+                    /></span>
+                  </span> </label
+                ><br />
+              </fieldset>
+            </details>
+
+            <details class="filter-section">
+              <summary class="filter-summary">
+                <span class="filter-icon filter-icon-price"></span>
+                Precio
+              </summary>
+              <fieldset class="filter-fieldset">
+                <legend class="filter-for">Filtrar por precio</legend>
+
+                <label class="filter-price-input">
+                  <span class="filter-price-icon">
+                    <img src="img/price-color.svg" alt="precio" />
+                  </span>
+                  <input
+                    id="minPrice"
+                    type="number"
+                    name="minPrice"
+                    placeholder="Mínimo"
+                    class="filter-input-number"
+                  />
+                </label>
+
+                <label class="filter-price-input">
+                  <span class="filter-price-icon">
+                    <img src="img/price-color.svg" alt="precio" />
+                  </span>
+                  <input
+                    id="maxPrice"
+                    type="number"
+                    name="maxPrice"
+                    placeholder="Máximo"
+                    class="filter-input-number"
+                  /> </label
+                ><br />
+              </fieldset>
+            </details>
+          </form>
+        </aside>
+
+        <!-- Cards -->
+        <main>
+          <section id="cards-container" class="cards-grid">
+            <div class="card">
+              <img
+                src="img/marruecos.png"
+                alt="Descubre Bangkok"
+                class="card-image"
+              />
+              <span class="card-tag">quads</span>
+              <header class="card-header">
+                <p class="card-description">
+                  África<span>9 días</span>
+                </p>
+                <h3 class="card-title">Descubre Bangkok</h3>
+              </header>
+              <footer class="card-footer">
+                <span class="card-price">
+                  <div>
+                    <p class="card-price-label">Desde</p>
+                    <strong class="card-price-amount">248 €</strong>
+                  </div>
+
+                  <button class="card-see-details">
+                    <span>Ver desglose </span
+                    ><img
+                      src="img/chevron-down.svg"
+                      class="card-see-details-icon"
+                    />
+                  </button>
+                </span>
+                <button class="card-button-reserve">Reservar</button>
+              </footer>
+            </div>
+            <div class="card">
+              <img
+                src="img/egipto.png"
+                alt="Descubre Egipto"
+                class="card-image"
+              />
+              <span class="card-tag">parapente</span>
+              <header class="card-header">
+                <p class="card-description">Colombia<span>5 días</span></p>
+                <h3 class="card-title">Descubre Egipto</h3>
+              </header>
+              <footer class="card-footer">
+                <span class="card-price">
+                  <div>
+                    <p class="card-price-label">Desde</p>
+                    <strong class="card-price-amount">199 €</strong>
+                  </div>
+
+                  <button class="card-see-details">
+                    <span>Ver desglose </span
+                    ><img
+                      src="img/chevron-down.svg"
+                      class="card-see-details-icon"
+                    />
+                  </button>
+                </span>
+                <button class="card-button-reserve">Reservar</button>
+              </footer>
+            </div>
+            <div class="card">
+              <img
+                src="img/bali.png"
+                alt="Descubre Bali"
+                class="card-image"
+              />
+              <span class="card-tag">surf</span>
+              <header class="card-header">
+                <p class="card-description">Indonesia<span>6 días</span></p>
+                <h3 class="card-title">Descubre Bali</h3>
+              </header>
+              <footer class="card-footer">
+                <span class="card-price">
+                  <div>
+                    <p class="card-price-label">Desde</p>
+                    <strong class="card-price-amount">270 €</strong>
+                  </div>
+
+                  <button class="card-see-details">
+                    <span>Ver desglose </span
+                    ><img
+                      src="img/chevron-down.svg"
+                      class="card-see-details-icon"
+                    />
+                  </button>
+                </span>
+                <button class="card-button-reserve">Reservar</button>
+              </footer>
+            </div>
+            <div class="card">
+              <img
+                src="img/marruecos.png"
+                alt="Descubre Bangkok"
+                class="card-image"
+              />
+              <span class="card-tag">quads</span>
+              <header class="card-header">
+                <p class="card-description">
+                  África<span>9 días</span>
+                </p>
+                <h3 class="card-title">Descubre Bangkok</h3>
+              </header>
+              <footer class="card-footer">
+                <span class="card-price">
+                  <div>
+                    <p class="card-price-label">Desde</p>
+                    <strong class="card-price-amount">248 €</strong>
+                  </div>
+
+                  <button class="card-see-details">
+                    <span>Ver desglose </span
+                    ><img
+                      src="img/chevron-down.svg"
+                      class="card-see-details-icon"
+                    />
+                  </button>
+                </span>
+                <button class="card-button-reserve">Reservar</button>
+              </footer>
+            </div>
+            <div class="card">
+              <img
+                src="img/egipto.png"
+                alt="Descubre Egipto"
+                class="card-image"
+              />
+              <span class="card-tag">parapente</span>
+              <header class="card-header">
+                <p class="card-description">Colombia<span>5 días</span></p>
+                <h3 class="card-title">Descubre Egipto</h3>
+              </header>
+              <footer class="card-footer">
+                <span class="card-price">
+                  <div>
+                    <p class="card-price-label">Desde</p>
+                    <strong class="card-price-amount">199 €</strong>
+                  </div>
+
+                  <button class="card-see-details">
+                    <span>Ver desglose </span
+                    ><img
+                      src="img/chevron-down.svg"
+                      class="card-see-details-icon"
+                    />
+                  </button>
+                </span>
+                <button class="card-button-reserve">Reservar</button>
+              </footer>
+            </div>
+            <div class="card">
+              <img
+                src="img/bali.png"
+                alt="Descubre Bali"
+                class="card-image"
+              />
+              <span class="card-tag">Surf</span>
+              <header class="card-header">
+                <p class="card-description">Indonesia<span>6 días</span></p>
+                <h3 class="card-title">Descubre Bali</h3>
+              </header>
+              <footer class="card-footer">
+                <span class="card-price">
+                  <div>
+                    <p class="card-price-label">Desde</p>
+                    <strong class="card-price-amount">270 €</strong>
+                  </div>
+
+                  <button class="card-see-details">
+                    <span>Ver desglose </span
+                    ><img
+                      src="img/chevron-down.svg"
+                      class="card-see-details-icon"
+                    />
+                  </button>
+                </span>
+                <button class="card-button-reserve">Reservar</button>
+              </footer>
+            </div>
+            <div class="card">
+              <img
+                src="img/bali.png"
+                alt="Descubre Bali"
+                class="card-image"
+              />
+              <span class="card-tag">Surf</span>
+              <header class="card-header">
+                <p class="card-description">Indonesia<span>6 días</span></p>
+                <h3 class="card-title">Descubre Bali</h3>
+              </header>
+              <footer class="card-footer">
+                <span class="card-price">
+                  <div>
+                    <p class="card-price-label">Desde</p>
+                    <strong class="card-price-amount">270 €</strong>
+                  </div>
+
+                  <button class="card-see-details">
+                    <span>Ver desglose </span
+                    ><img
+                      src="img/chevron-down.svg"
+                      class="card-see-details-icon"
+                    />
+                  </button>
+                </span>
+                <button class="card-button-reserve">Reservar</button>
+              </footer>
+            </div>
+            <div class="card">
+              <img
+                src="img/bali.png"
+                alt="Descubre Bali"
+                class="card-image"
+              />
+              <span class="card-tag">Surf</span>
+              <header class="card-header">
+                <p class="card-description">Indonesia<span>6 días</span></p>
+                <h3 class="card-title">Descubre Bali</h3>
+              </header>
+              <footer class="card-footer">
+                <span class="card-price">
+                  <div>
+                    <p class="card-price-label">Desde</p>
+                    <strong class="card-price-amount">270 €</strong>
+                  </div>
+
+                  <button class="card-see-details">
+                    <span>Ver desglose </span
+                    ><img
+                      src="img/chevron-down.svg"
+                      class="card-see-details-icon"
+                    />
+                  </button>
+                </span>
+                <button class="card-button-reserve">Reservar</button>
+              </footer>
+            </div>
+            <div class="card">
+              <img
+                src="img/bali.png"
+                alt="Descubre Bali"
+                class="card-image"
+              />
+              <span class="card-tag">Surf</span>
+              <header class="card-header">
+                <p class="card-description">Indonesia<span>6 días</span></p>
+                <h3 class="card-title">Descubre Bali</h3>
+              </header>
+              <footer class="card-footer">
+                <span class="card-price">
+                  <div>
+                    <p class="card-price-label">Desde</p>
+                    <strong class="card-price-amount">270 €</strong>
+                  </div>
+
+                  <button class="card-see-details">
+                    <span>Ver desglose </span
+                    ><img
+                      src="img/chevron-down.svg"
+                      class="card-see-details-icon"
+                    />
+                  </button>
+                </span>
+                <button class="card-button-reserve">Reservar</button>
+              </footer>
+            </div>
+          </section>
+        </main>
+      </section>
+    </section>
+
+    <!-- PopoVer desglose -->
+    <div
+      id="popover-details"
+      class="popover-details hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="titulo-details"
+      data-visible="false"
+      style="position: fixed; top: 0px; left: 0px"
+    >
+      <header>
+        <strong>Desglose de precios</strong>
+        <button class="popover-close">
+          <img src="img/close.svg" aria-label="Cerrar ventana" alt="Cerrar" />
+        </button>
+      </header>
+      <section class="popover-content">
+        <h3 class="popover-title">
+          África<span>9 días</span>
+        </h3>
+        <div class="popover-prices">
+          <p class="popover-price">
+            <span>Precio base:</span>
+            <strong class="popover-price-base">1124€</strong>
+          </p>
+          <p class="popover-price">
+            <span>Impuestos:</span>
+            <strong class="popover-price-tax">150€</strong>
+          </p>
+        </div>
+      </section>
+      <footer>
+        <span>Total:</span>
+        <span class="popover-price-total">2455 €</span>
+      </footer>
+    </div>
+
+    <footer>
+      <div class="footer__logo-section"><img src="img/logo.svg" /></div>
+      <div class="footer__copywright-section">
+        @2025 Waveless - Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
