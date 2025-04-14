@@ -356,9 +356,8 @@ aside header h2 {
   transition: transform 0.3s ease;
 }
 
-
 .filter-section[open] .filter-summary {
-  color: var(--filters-open); 
+  color: var(--filters-open);
 }
 
 .filter-icon {
@@ -379,7 +378,6 @@ aside header h2 {
   background: url(../img/icon_adventure.svg);
 }
 
-
 .filter-icon-house {
   background: url(../img/icon_house.svg);
 }
@@ -388,7 +386,6 @@ aside header h2 {
   background: url(../img/price-color-bk.svg);
   color: #777;
 }
-
 
 .filter-fieldset {
   border: none;
