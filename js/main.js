@@ -61,6 +61,39 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", updateCarousel);
   updateCarousel();
 
+   // === CAROUSEL: Swipe táctil en mobile ===
+   let startX = 0;
+   let isDragging = false;
+ 
+   slidesContainer.addEventListener("touchstart", (e) => {
+     startX = e.touches[0].clientX;
+     isDragging = true;
+   });
+ 
+   slidesContainer.addEventListener("touchmove", (e) => {
+     if (!isDragging) return;
+     const touchX = e.touches[0].clientX;
+     const diff = touchX - startX;
+ 
+     // Evita scroll horizontal si el movimiento es pequeño
+     if (Math.abs(diff) < 50) return;
+ 
+     if (diff > 0) {
+       // Swipe hacia la derecha: ir a slide anterior
+       currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+     } else {
+       // Swipe hacia la izquierda: ir a siguiente slide
+       currentIndex = (currentIndex + 1) % slides.length;
+     }
+ 
+     updateCarousel();
+     isDragging = false;
+   });
+ 
+   slidesContainer.addEventListener("touchend", () => {
+     isDragging = false;
+   });
+
   // === POPOVER DETAILS ===
   class PopoverDetails {
     constructor() {

@@ -746,6 +746,24 @@ main {
   font-size: 1.4rem;
 }
 
+#popover-details[data-visible="false"],
+.hidden {
+  display: none !important;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+#popover-details[data-visible="true"] {
+  display: block;
+  position: absolute; 
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 .footer__logo-section {
   display: flex;
   justify-content: center;
