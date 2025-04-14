@@ -40,4 +40,4 @@ Diseñado para funcionar en **móviles**, **tablets** y **desktop**.
 
 **Podés ver la demo funcionando en:**
 
-[![Ver Demo](https://img.shields.io/badge/Ver%20Demo-Click%20aquí-blue)](https://jorge-r-rodriguez.github.io/avoris-html/)
+[![Ver Demo](https://img.shields.io/badge/Ver%20Demo-Click%20aquí-blue)](https://jorge-r-rodriguez.github.io/html-avoris/)
