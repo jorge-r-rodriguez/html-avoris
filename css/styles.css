@@ -279,6 +279,10 @@ nav {
   display: none;
 }
 
+.filter-ico {
+  margin: 0 10px;
+}
+
 .layout__grid {
   display: flex;
   gap: 24px;
