@@ -252,7 +252,7 @@ nav {
   transition: all 0.2s;
 }
 
-.intro {
+.discover {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,7 +260,7 @@ nav {
   text-align: center;
 }
 
-.intro p {
+.discover p {
   font-size: 1.4rem;
   color: #6b7d8d;
   margin-bottom: 1rem;
@@ -340,20 +340,6 @@ aside header h2 {
 
 .filter-summary::marker {
   content: "";
-}
-
-.filter-summary::after {
-  content: "";
-  position: absolute;
-  top: 0.5rem;
-  right: 0;
-  width: 1.5em;
-  height: 1.5em;
-  mask-image: url("img/chevron-right.svg");
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  background-color: gray;
-  transition: transform 0.3s ease;
 }
 
 .filter-section[open] .filter-summary {
@@ -791,12 +777,12 @@ main {
     font-size: 2.1rem;
   }
 
-  .intro {
+  .discover {
     margin-top: 3.5rem;
     margin-bottom: 0;
   }
 
-  .intro p {
+  .discover p {
     font-size: 1.3rem;
   }
 
@@ -913,7 +899,7 @@ main {
     font-size: 2rem;
   }
 
-  .intro p {
+  .discover p {
     font-size: 1.25rem;
   }
 
