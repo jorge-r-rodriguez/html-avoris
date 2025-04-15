@@ -26,7 +26,7 @@ avoris-html/
 
 - ✅ Navegación responsive con menú hamburguesa
 - ✅ Carrusel dinámico de imágenes
-- ✅ Tarjetas con filtros por destino, actividad, alojamiento y rango de precio
+- ✅ Tarjetas con filtros por actividad y rango de precio
 - ✅ Popovers con desglose de precio y animaciones
 - ✅ Accesibilidad y semántica básica
 
